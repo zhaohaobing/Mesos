@@ -1,0 +1,35 @@
+sudo apt-get update
+sudo apt-get install -y tar wget git
+sudo apt-get install -y openjdk-7-jdk 
+// can't install openjdk-7-jdk
+// how to solve?
+// Add oracle ppa source
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update
+sudo apt-get install openjdk-7-jdk
+// run ok.
+# Install autotools (Only necessary if building from git repository).
+$ sudo apt-get install -y autoconf libtool
+
+# Install other Mesos dependencies.
+$ sudo apt-get -y install build-essential python-dev python-six python-virtualenv libcurl4-nss-dev libsasl2-dev libsasl2-modules maven libapr1-dev libsvn-dev
+
+clone mesos.git from github.
+run ./bootstrap
+mkdir build
+../configure
+make
+make check
+make install
+//In ubuntu 16.04, can't make the 1.40 version.
+//how to solve?
+
+
+docker search 
+docker pull
+https://hub.docker.com
+docker stop
+docker rm
+docker ps -a
+docker start
+docker stop
